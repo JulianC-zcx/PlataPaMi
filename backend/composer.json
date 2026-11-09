@@ -1,0 +1,17 @@
+{
+  "name": "platapami/backend",
+  "description": "API PHP + MySQL de PlataPaMi",
+  "type": "project",
+  "require": {
+    "php": ">=8.1",
+    "ext-pdo": "*",
+    "ext-openssl": "*",
+    "ext-mbstring": "*",
+    "ext-gd": "*",
+    "phpmailer/phpmailer": "^6.9 || ^7.0",
+    "tecnickcom/tcpdf": "^6.7"
+  },
+  "autoload": {
+    "psr-4": { "PlataPaMi\\": "src/" }
+  }
+}

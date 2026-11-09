@@ -1,0 +1,3 @@
+# Protege .env, src/, vendor/, database/, storage/... si el proyecto completo queda dentro de htdocs.
+# Lo único público es la carpeta /public (su propio .htaccess lo vuelve a permitir).
+Require all denied

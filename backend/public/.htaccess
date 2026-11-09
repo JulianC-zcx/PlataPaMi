@@ -1,0 +1,12 @@
+# Pasa el header Authorization a PHP (Apache + CGI/FastCGI)
+RewriteEngine On
+RewriteCond %{HTTP:Authorization} .
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+# En producción (con certificado SSL) descomenta estas 3 líneas para forzar HTTPS:
+# RewriteCond %{HTTPS} off
+# RewriteCond %{HTTP:X-Forwarded-Proto} !https
+# RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+Options -Indexes
+Require all granted
